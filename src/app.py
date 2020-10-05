@@ -1,9 +1,9 @@
 from flask import Flask, render_template, request, session, make_response
 
-from src1.common import Database
-from src1.models.blog import Blog
-from src1.models.post import Post
-from src1.models.user import User
+from src.common.database import Database
+from src.models.blog import Blog
+from src.models.post import Post
+from src.models.user import User
 
 app = Flask(__name__)
 app.secret_key = "43u890jiwefosaf90dsa8hfu"  # just put a string here for testing
