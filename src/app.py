@@ -1,12 +1,12 @@
 from flask import Flask, render_template, request, session, make_response
-
+import os
 from src.common.database import Database
 from src.models.blog import Blog
 from src.models.post import Post
 from src.models.user import User
 
 app = Flask(__name__)
-app.secret_key = "43u890jiwefosaf90dsa8hfu"  # just put a string here for testing
+app.secret_key = app.secret_key = os.urandom(64)
 
 
 # Initializes mongodb database before requests
